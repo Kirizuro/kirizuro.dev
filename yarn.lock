@@ -146,6 +146,11 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz#d7c6e6755c78567a951e04ab52ef0fd26de59f32"
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
 
+"@jridgewell/sourcemap-codec@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.0.tgz#3188bcb273a414b0d215fd22a58540b989b9409a"
+  integrity sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==
+
 "@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.9":
   version "0.3.18"
   resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.18.tgz#25783b2086daf6ff1dcb53c9249ae480e4dd4cd6"
@@ -153,6 +158,72 @@
   dependencies:
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
+
+"@napi-rs/canvas-android-arm64@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-android-arm64/-/canvas-android-arm64-0.1.65.tgz#b42f2a2f67cb32ad6669e53561987d58384e791f"
+  integrity sha512-ZYwqFYEKcT5Zr8lbiaJNJj/poLaeK2TncolY914r+gD2TJNeP7ZqvE7A2SX/1C9MB4E3DQEwm3YhL3WEf0x3MQ==
+
+"@napi-rs/canvas-darwin-arm64@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-darwin-arm64/-/canvas-darwin-arm64-0.1.65.tgz#8b1a8c2495816f640c1c0299e717de722b961608"
+  integrity sha512-Pg1pfiJEyDIsX+V0QaJPRWvXbw5zmWAk3bivFCvt/5pwZb37/sT6E/RqPHT9NnqpDyKW6SriwY9ypjljysUA1Q==
+
+"@napi-rs/canvas-darwin-x64@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-darwin-x64/-/canvas-darwin-x64-0.1.65.tgz#c34da0605c6220ec4e42bbf4dd2ae594c19a4048"
+  integrity sha512-3Tr+/HjdJN7Z/VKIcsxV2DvDIibZCExgfYTgljCkUSFuoI7iNkOE6Dc1Q6j212EB9PeO8KmfrViBqHYT6IwWkA==
+
+"@napi-rs/canvas-linux-arm-gnueabihf@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm-gnueabihf/-/canvas-linux-arm-gnueabihf-0.1.65.tgz#83b618fe762190bbbfdb66e636f6de0ea940c0ec"
+  integrity sha512-3KP+dYObH7CVkZMZWwk1WX9jRjL+EKdQtD43H8MOI+illf+dwqLlecdQ4d9bQRIxELKJ8dyPWY4fOp/Ngufrdg==
+
+"@napi-rs/canvas-linux-arm64-gnu@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.65.tgz#b267573eea3209c76d69c69f8fd040407720167d"
+  integrity sha512-Ka3StKz7Dq7kjTF3nNJCq43UN/VlANS7qGE3dWkn1d+tQNsCRy/wRmyt1TUFzIjRqcTFMQNRbgYq84+53UBA0A==
+
+"@napi-rs/canvas-linux-arm64-musl@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm64-musl/-/canvas-linux-arm64-musl-0.1.65.tgz#36896b8166f6e8752c0142c6114cb64cf235a649"
+  integrity sha512-O4xMASm2JrmqYoiDyxVWi+z5C14H+oVEag2rZ5iIA67dhWqYZB+iO7wCFpBYRj31JPBR29FOsu6X9zL+DwBFdw==
+
+"@napi-rs/canvas-linux-riscv64-gnu@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-riscv64-gnu/-/canvas-linux-riscv64-gnu-0.1.65.tgz#ab5059fae49769ccf726e8ded103f15e0a39e16c"
+  integrity sha512-dblWDaA59ZU8bPbkfM+riSke7sFbNZ70LEevUdI5rgiFEUzYUQlU34gSBzemTACj5rCWt1BYeu0GfkLSjNMBSw==
+
+"@napi-rs/canvas-linux-x64-gnu@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-0.1.65.tgz#767b023c9d7d9d09be06afdfe37ed0549b5b7a6c"
+  integrity sha512-wsp+atutw13OJXGU3DDkdngtBDoEg01IuK5xMe0L6VFPV8maGkh17CXze078OD5QJOc6kFyw3DDscMLOPF8+oA==
+
+"@napi-rs/canvas-linux-x64-musl@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-0.1.65.tgz#9551edca5b5f0e7abfe7d5fea97b1ce25aeed4ca"
+  integrity sha512-odX+nN+IozWzhdj31INcHz3Iy9+EckNw+VqsZcaUxZOTu7/3FmktRNI6aC1qe5minZNv1m05YOS1FVf7fvmjlA==
+
+"@napi-rs/canvas-win32-x64-msvc@0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.65.tgz#86b9209267a20df2c0044b650feb9abc8c85be3d"
+  integrity sha512-RZQX3luWnlNWgdMnLMQ1hyfQraeAn9lnxWWVCHuUM4tAWEV8UDdeb7cMwmJW7eyt8kAosmjeHt3cylQMHOxGFg==
+
+"@napi-rs/canvas@^0.1.65":
+  version "0.1.65"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas/-/canvas-0.1.65.tgz#ef97a41b83aa03ae37862e789d124ec80eaf5b33"
+  integrity sha512-YcFhXQcp+b2d38zFOJNbpyPHnIL7KAEkhJQ+UeeKI5IpE9B8Cpf/M6RiHPQXSsSqnYbrfFylnW49dyh2oeSblQ==
+  optionalDependencies:
+    "@napi-rs/canvas-android-arm64" "0.1.65"
+    "@napi-rs/canvas-darwin-arm64" "0.1.65"
+    "@napi-rs/canvas-darwin-x64" "0.1.65"
+    "@napi-rs/canvas-linux-arm-gnueabihf" "0.1.65"
+    "@napi-rs/canvas-linux-arm64-gnu" "0.1.65"
+    "@napi-rs/canvas-linux-arm64-musl" "0.1.65"
+    "@napi-rs/canvas-linux-riscv64-gnu" "0.1.65"
+    "@napi-rs/canvas-linux-x64-gnu" "0.1.65"
+    "@napi-rs/canvas-linux-x64-musl" "0.1.65"
+    "@napi-rs/canvas-win32-x64-msvc" "0.1.65"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -182,6 +253,13 @@
   dependencies:
     debug "^4.3.4"
 
+"@sveltejs/vite-plugin-svelte-inspector@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte-inspector/-/vite-plugin-svelte-inspector-2.1.0.tgz#116ba2b73be43c1d7d93de749f37becc7e45bb8c"
+  integrity sha512-9QX28IymvBlSCqsCll5t0kQVxipsfhFFL+L2t3nTWfXnddYwxBuAEtTtlaVQpRz9c37BhJjltSeY4AJSC03SSg==
+  dependencies:
+    debug "^4.3.4"
+
 "@sveltejs/vite-plugin-svelte@^2.0.4":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-2.4.1.tgz#bab9d97a83fee641562f2657ce6ea755808bc149"
@@ -194,6 +272,19 @@
     magic-string "^0.30.0"
     svelte-hmr "^0.15.1"
     vitefu "^0.2.4"
+
+"@sveltejs/vite-plugin-svelte@^3.0.0":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-3.1.2.tgz#be3120b52e6d9facb55d58392b0dad9e5a35ba6f"
+  integrity sha512-Txsm1tJvtiYeLUVRNqxZGKR/mI+CzuIQuc2gn+YCs9rMTowpNZ2Nqt53JdL8KF9bLhAf2ruR/dr9eZCwdTriRA==
+  dependencies:
+    "@sveltejs/vite-plugin-svelte-inspector" "^2.1.0"
+    debug "^4.3.4"
+    deepmerge "^4.3.1"
+    kleur "^4.1.5"
+    magic-string "^0.30.10"
+    svelte-hmr "^0.16.0"
+    vitefu "^0.2.5"
 
 "@tsconfig/svelte@^4.0.1":
   version "4.0.1"
@@ -686,6 +777,13 @@ magic-string@^0.30.0:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.13"
 
+magic-string@^0.30.10:
+  version "0.30.17"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.17.tgz#450a449673d2460e5bbcfba9a61916a1714c7453"
+  integrity sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.5.0"
+
 make-dir@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
@@ -826,6 +924,13 @@ path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
   integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
+
+pdfjs-dist@^4.0.379:
+  version "4.10.38"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-4.10.38.tgz#3ee698003790dc266cc8b55c0e662ccb9ae18f53"
+  integrity sha512-/Y3fcFrXEAsMjJXeL9J8+ZG9U01LbuWaYypvDW2ycW1jL269L3js3DVBjDJ0Up9Np1uqDXsDrRihHANhZOlwdQ==
+  optionalDependencies:
+    "@napi-rs/canvas" "^0.1.65"
 
 picocolors@^1.0.0:
   version "1.0.0"
@@ -1066,6 +1171,19 @@ svelte-hmr@^0.15.1:
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.2.tgz#d2f6fc82e040f2734abd54cea5cbef46828f2538"
   integrity sha512-q/bAruCvFLwvNbeE1x3n37TYFb3mTBJ6TrCq6p2CoFbSTNhDE9oAtEfpy+wmc9So8AG0Tja+X0/mJzX9tSfvIg==
 
+svelte-hmr@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.16.0.tgz#9f345b7d1c1662f1613747ed7e82507e376c1716"
+  integrity sha512-Gyc7cOS3VJzLlfj7wKS0ZnzDVdv3Pn2IuVeJPk9m2skfhcu5bq3wtIZyQGggr7/Iim5rH5cncyQft/kRLupcnA==
+
+svelte-pdf@^1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/svelte-pdf/-/svelte-pdf-1.0.24.tgz#c83fec35192ba2a9a2402c08722f7f56b2627167"
+  integrity sha512-pyC8majKzyNrne8YfI9tcOIZDi8ETtA5arW0M+mbq6Z391wu2XT3MpT0ky4yKPUWjzVjsp4wEEuABqHVMgHQKQ==
+  dependencies:
+    "@sveltejs/vite-plugin-svelte" "^3.0.0"
+    pdfjs-dist "^4.0.379"
+
 svelte-preprocess@^5.0.3:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-5.0.4.tgz#2123898e079a074f7f4ef1799e10e037f5bcc55b"
@@ -1187,6 +1305,11 @@ vitefu@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/vitefu/-/vitefu-0.2.4.tgz#212dc1a9d0254afe65e579351bed4e25d81e0b35"
   integrity sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==
+
+vitefu@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/vitefu/-/vitefu-0.2.5.tgz#c1b93c377fbdd3e5ddd69840ea3aa70b40d90969"
+  integrity sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==
 
 wrappy@1:
   version "1.0.2"

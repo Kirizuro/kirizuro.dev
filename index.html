@@ -2,11 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/favicon-solid.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Claudio Junior</title>
+    <meta name="description" content="Claudio Junior - Senior Software Engineer specializing in TypeScript, React, Node.js, and React Native. 9+ years of experience building web and mobile applications." />
+    <meta name="theme-color" content="#030712" />
+    <title>Claudio Junior | Software Engineer</title>
   </head>
   <body>
+    <script>
+      // Prevent flash of wrong theme
+      (function() {
+        var saved = localStorage.getItem('theme');
+        var theme = (saved === 'light' || saved === 'dark') ? saved
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claudio Junior | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            gray: { 950: '#0a0f1a' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #030712; color: rgba(255,255,255,0.87); margin: 0; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(16,185,129,0.3); color: white; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #030712; }
+    ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #374151; }
+    @keyframes fade-in { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .animate-fi { animation: fade-in 0.6s ease-out forwards; }
+    .animate-fi-1 { animation: fade-in 0.6s ease-out 0.15s forwards; }
+    .animate-fi-2 { animation: fade-in 0.6s ease-out 0.3s forwards; }
+    .animate-fi-3 { animation: fade-in 0.6s ease-out 0.45s forwards; }
+    .animate-fi-4 { animation: fade-in 0.6s ease-out 0.6s forwards; }
+    a { color: inherit; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-gray-950 text-white">
+
+    <!-- NAV -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#hero" class="text-emerald-400 font-mono font-bold text-lg hover:text-emerald-300 transition-colors">&lt;CJ /&gt;</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#experience" class="text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm" data-i18n="nav.experience">Experience</a>
+          <a href="#projects" class="text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm" data-i18n="nav.projects">Projects</a>
+          <a href="#skills" class="text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm" data-i18n="nav.skills">Skills</a>
+          <a href="#contact" class="text-gray-400 hover:text-emerald-400 transition-colors font-mono text-sm" data-i18n="nav.contact">Contact</a>
+          <button id="langToggle" onclick="toggleLang()" class="ml-4 px-3 py-1 rounded border border-gray-700 text-xs font-mono text-gray-400 hover:border-emerald-400 hover:text-emerald-400 transition-all">PT</button>
+        </div>
+        <button id="mobileBtn" onclick="toggleMobile()" class="md:hidden text-gray-400 hover:text-emerald-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden bg-gray-950/95 backdrop-blur-md border-t border-gray-800/50 px-6 py-4 flex flex-col gap-4">
+        <a href="#experience" onclick="closeMobile()" class="text-gray-400 hover:text-emerald-400 font-mono text-sm" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" onclick="closeMobile()" class="text-gray-400 hover:text-emerald-400 font-mono text-sm" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" onclick="closeMobile()" class="text-gray-400 hover:text-emerald-400 font-mono text-sm" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" onclick="closeMobile()" class="text-gray-400 hover:text-emerald-400 font-mono text-sm" data-i18n="nav.contact">Contact</a>
+        <button onclick="toggleLang()" class="px-3 py-1 rounded border border-gray-700 text-xs font-mono text-gray-400 hover:border-emerald-400 hover:text-emerald-400 transition-all w-fit" data-i18n-btn="lang">PT</button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 -left-32 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-20">
+        <div class="font-mono text-emerald-400 text-sm mb-4 opacity-0 animate-fi" data-i18n="hero.greeting">Hi, I'm</div>
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 opacity-0 animate-fi-1">Claudio Junior<span class="text-emerald-400">.</span></h1>
+        <h2 class="text-2xl md:text-4xl font-bold text-gray-400 mb-8 opacity-0 animate-fi-2" data-i18n="hero.role">Senior Software Engineer</h2>
+        <p class="text-gray-400 max-w-2xl text-lg leading-relaxed mb-10 opacity-0 animate-fi-3" data-i18n="hero.description">Full Stack Developer with 9+ years of experience building agile, well-structured web systems and mobile applications. Specialized in TypeScript, React, Node.js, and modern web technologies.</p>
+        <div class="bg-gray-900/80 border border-gray-800 rounded-lg p-4 mb-10 max-w-lg font-mono text-sm opacity-0 animate-fi-3">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            <span class="text-gray-600 text-xs ml-2">~/claudio-junior</span>
+          </div>
+          <div class="text-gray-400">
+            <span class="text-emerald-400">const</span> <span class="text-blue-400">developer</span> = {<br/>
+            <span class="ml-4 text-gray-500">name:</span> <span class="text-amber-300">'Claudio Junior'</span>,<br/>
+            <span class="ml-4 text-gray-500">stack:</span> [<span class="text-amber-300">'TypeScript'</span>, <span class="text-amber-300">'React'</span>, <span class="text-amber-300">'Node.js'</span>],<br/>
+            <span class="ml-4 text-gray-500">experience:</span> <span class="text-purple-400">'9+ years'</span>,<br/>
+            <span class="ml-4 text-gray-500">available:</span> <span class="text-emerald-400">true</span><br/>
+            };
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-4 opacity-0 animate-fi-4">
+          <a href="#projects" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-emerald-500/25" data-i18n="hero.cta">View my work</a>
+          <a href="#contact" class="px-6 py-3 border border-gray-700 hover:border-emerald-400 text-gray-300 hover:text-emerald-400 rounded-lg transition-all" data-i18n="hero.contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24 relative">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2"><span class="text-emerald-400 font-mono text-lg mr-2">02.</span><span data-i18n="experience.title">Experience</span></h2>
+        <div class="w-20 h-1 bg-emerald-400/50 rounded mb-16"></div>
+        <div class="relative">
+          <div class="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gray-800"></div>
+
+          <!-- Job 1 -->
+          <div class="relative pl-8 md:pl-20 pb-12 group">
+            <div class="absolute left-0 md:left-8 top-1"><div class="absolute -left-[5px] -top-[5px] w-[11px] h-[11px] rounded-full border-2 border-emerald-400 bg-gray-950 group-hover:bg-emerald-400 transition-colors"></div></div>
+            <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all group-hover:shadow-lg group-hover:shadow-emerald-500/5">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 class="text-xl font-bold text-white" data-i18n="exp.methodical.title">Senior Software Engineer</h3>
+                <span class="text-emerald-400 font-mono text-sm" data-i18n="exp.methodical.period">Sep 2024 — Aug 2025</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                <span class="text-gray-300 font-semibold">The Methodical Group</span>
+                <span class="hidden md:inline text-gray-600">·</span>
+                <span class="text-gray-500 text-sm" data-i18n="exp.methodical.location">Remote · USA</span>
+              </div>
+              <p class="text-gray-400 leading-relaxed mb-4" data-i18n="exp.methodical.description">Part of a team developing a comprehensive system that enables clients to create and manage businesses across all US states. Built with Next.js and NestJS in a remote-first environment.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Next.js</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">NestJS</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">TypeScript</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="relative pl-8 md:pl-20 pb-12 group">
+            <div class="absolute left-0 md:left-8 top-1"><div class="absolute -left-[5px] -top-[5px] w-[11px] h-[11px] rounded-full border-2 border-emerald-400 bg-gray-950 group-hover:bg-emerald-400 transition-colors"></div></div>
+            <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all group-hover:shadow-lg group-hover:shadow-emerald-500/5">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 class="text-xl font-bold text-white" data-i18n="exp.mouts.title">Full Stack Developer</h3>
+                <span class="text-emerald-400 font-mono text-sm" data-i18n="exp.mouts.period">Jul 2023 — Sep 2024</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                <span class="text-gray-300 font-semibold">Mouts TI</span>
+                <span class="hidden md:inline text-gray-600">·</span>
+                <span class="text-gray-500 text-sm" data-i18n="exp.mouts.location">Remote</span>
+              </div>
+              <p class="text-gray-400 leading-relaxed mb-4" data-i18n="exp.mouts.description">Developed the Rewards Module for AB InBev, one of the largest beverage companies in the world. Built interactive frontends with React.js and TypeScript.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">React.js</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">TypeScript</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="relative pl-8 md:pl-20 pb-12 group">
+            <div class="absolute left-0 md:left-8 top-1"><div class="absolute -left-[5px] -top-[5px] w-[11px] h-[11px] rounded-full border-2 border-emerald-400 bg-gray-950 group-hover:bg-emerald-400 transition-colors"></div></div>
+            <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all group-hover:shadow-lg group-hover:shadow-emerald-500/5">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 class="text-xl font-bold text-white" data-i18n="exp.certsys.title">Full Stack Developer</h3>
+                <span class="text-emerald-400 font-mono text-sm" data-i18n="exp.certsys.period">Jun 2021 — May 2023</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                <span class="text-gray-300 font-semibold">Certsys Tecnologia da Informação</span>
+                <span class="hidden md:inline text-gray-600">·</span>
+                <span class="text-gray-500 text-sm" data-i18n="exp.certsys.location">São Paulo, Brazil</span>
+              </div>
+              <p class="text-gray-400 leading-relaxed mb-4" data-i18n="exp.certsys.description">Worked on diverse national and international projects. Led mobile development with React Native, implemented CI/CD pipelines, and contributed to enterprise-grade solutions.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">React Native</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">CI/CD</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">TypeScript</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 4 -->
+          <div class="relative pl-8 md:pl-20 pb-12 group">
+            <div class="absolute left-0 md:left-8 top-1"><div class="absolute -left-[5px] -top-[5px] w-[11px] h-[11px] rounded-full border-2 border-emerald-400 bg-gray-950 group-hover:bg-emerald-400 transition-colors"></div></div>
+            <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all group-hover:shadow-lg group-hover:shadow-emerald-500/5">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 class="text-xl font-bold text-white" data-i18n="exp.target.title">Full Stack Developer</h3>
+                <span class="text-emerald-400 font-mono text-sm" data-i18n="exp.target.period">Jan 2020 — Apr 2021</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                <span class="text-gray-300 font-semibold">Target Software</span>
+                <span class="hidden md:inline text-gray-600">·</span>
+                <span class="text-gray-500 text-sm">Sorocaba, SP</span>
+              </div>
+              <p class="text-gray-400 leading-relaxed mb-4" data-i18n="exp.target.description">Built a bilingual (English/Spanish) mobile app for a language school using React Native. Implemented real-time chat with Firebase and push notifications.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">React Native</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Firebase</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">SQL</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Push Notifications</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 5 -->
+          <div class="relative pl-8 md:pl-20 group">
+            <div class="absolute left-0 md:left-8 top-1"><div class="absolute -left-[5px] -top-[5px] w-[11px] h-[11px] rounded-full border-2 border-emerald-400 bg-gray-950 group-hover:bg-emerald-400 transition-colors"></div></div>
+            <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all group-hover:shadow-lg group-hover:shadow-emerald-500/5">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 class="text-xl font-bold text-white" data-i18n="exp.cotepe.title">Full Stack Developer</h3>
+                <span class="text-emerald-400 font-mono text-sm" data-i18n="exp.cotepe.period">Sep 2019 — Dec 2019</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                <span class="text-gray-300 font-semibold">Cotepe Engenharia Elétrica</span>
+                <span class="hidden md:inline text-gray-600">·</span>
+                <span class="text-gray-500 text-sm">Sorocaba, SP</span>
+              </div>
+              <p class="text-gray-400 leading-relaxed mb-4" data-i18n="exp.cotepe.description">Developed a local application for creating sales proposals (PV) for the commercial sector. Built with Vue.js on the frontend and Node.js + Firebase on the backend.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Vue.js</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Node.js</span>
+                <span class="px-3 py-1 bg-emerald-400/10 text-emerald-400 text-xs font-mono rounded-full">Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2"><span class="text-emerald-400 font-mono text-lg mr-2">03.</span><span data-i18n="projects.title">Featured Projects</span></h2>
+        <div class="w-20 h-1 bg-emerald-400/50 rounded mb-16"></div>
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div class="group bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1 duration-300">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl">🏢</span>
+              <span class="text-xs font-mono text-gray-500 bg-gray-800/50 px-2 py-1 rounded" data-i18n="project.1.role">Senior Engineer</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors" data-i18n="project.1.title">US Business Management Platform</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="project.1.description">Comprehensive SaaS platform enabling clients to create and manage businesses across all US states. Multi-tenant architecture with complex form workflows and state-specific compliance rules.</p>
+            <div class="flex flex-wrap gap-2"><span class="text-xs font-mono text-gray-500">Next.js</span><span class="text-xs font-mono text-gray-500">NestJS</span><span class="text-xs font-mono text-gray-500">TypeScript</span><span class="text-xs font-mono text-gray-500">PostgreSQL</span><span class="text-xs font-mono text-gray-500">REST API</span></div>
+          </div>
+
+          <div class="group bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1 duration-300">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl">🍺</span>
+              <span class="text-xs font-mono text-gray-500 bg-gray-800/50 px-2 py-1 rounded" data-i18n="project.2.role">Full Stack Developer</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors" data-i18n="project.2.title">AB InBev Rewards Module</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="project.2.description">Rewards and loyalty system for one of the world's largest beverage companies. High-performance frontend with real-time data visualization and complex business logic.</p>
+            <div class="flex flex-wrap gap-2"><span class="text-xs font-mono text-gray-500">React.js</span><span class="text-xs font-mono text-gray-500">TypeScript</span><span class="text-xs font-mono text-gray-500">Node.js</span><span class="text-xs font-mono text-gray-500">REST API</span></div>
+          </div>
+
+          <div class="group bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1 duration-300">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl">📱</span>
+              <span class="text-xs font-mono text-gray-500 bg-gray-800/50 px-2 py-1 rounded" data-i18n="project.3.role">Mobile Developer</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors" data-i18n="project.3.title">Bilingual School App</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="project.3.description">Cross-platform mobile application for a language school with real-time chat, push notifications, and bilingual support (English/Spanish). Built from scratch with React Native.</p>
+            <div class="flex flex-wrap gap-2"><span class="text-xs font-mono text-gray-500">React Native</span><span class="text-xs font-mono text-gray-500">Firebase</span><span class="text-xs font-mono text-gray-500">Push Notifications</span><span class="text-xs font-mono text-gray-500">Real-time Chat</span></div>
+          </div>
+
+          <div class="group bg-gray-900/50 border border-gray-800/50 rounded-lg p-6 hover:border-emerald-400/30 transition-all hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1 duration-300">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl">🚀</span>
+              <span class="text-xs font-mono text-gray-500 bg-gray-800/50 px-2 py-1 rounded" data-i18n="project.4.role">Full Stack Developer</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors" data-i18n="project.4.title">Enterprise Mobile Solutions</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="project.4.description">Multiple national and international mobile applications built with React Native. Implemented CI/CD pipelines and contributed to large-scale enterprise projects.</p>
+            <div class="flex flex-wrap gap-2"><span class="text-xs font-mono text-gray-500">React Native</span><span class="text-xs font-mono text-gray-500">CI/CD</span><span class="text-xs font-mono text-gray-500">TypeScript</span><span class="text-xs font-mono text-gray-500">Enterprise</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2"><span class="text-emerald-400 font-mono text-lg mr-2">04.</span><span data-i18n="skills.title">Tech Stack</span></h2>
+        <div class="w-20 h-1 bg-emerald-400/50 rounded mb-16"></div>
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <!-- Frontend -->
+          <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6">
+            <div class="flex items-center gap-3 mb-6"><span class="text-emerald-400 font-mono text-lg">{}</span><h3 class="text-lg font-bold text-white" data-i18n="skills.frontend">Frontend</h3></div>
+            <div class="space-y-4" id="skills-frontend"></div>
+          </div>
+
+          <!-- Backend -->
+          <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6">
+            <div class="flex items-center gap-3 mb-6"><span class="text-emerald-400 font-mono text-lg">&gt;_</span><h3 class="text-lg font-bold text-white" data-i18n="skills.backend">Backend</h3></div>
+            <div class="space-y-4" id="skills-backend"></div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6">
+            <div class="flex items-center gap-3 mb-6"><span class="text-lg">📱</span><h3 class="text-lg font-bold text-white" data-i18n="skills.mobile">Mobile</h3></div>
+            <div class="space-y-4" id="skills-mobile"></div>
+          </div>
+
+          <!-- Tools -->
+          <div class="bg-gray-900/50 border border-gray-800/50 rounded-lg p-6">
+            <div class="flex items-center gap-3 mb-6"><span class="text-lg">⚙️</span><h3 class="text-lg font-bold text-white" data-i18n="skills.tools">Tools & DevOps</h3></div>
+            <div class="space-y-4" id="skills-tools"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 relative">
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2"><span class="text-emerald-400 font-mono text-lg mr-2">05.</span><span data-i18n="contact.title">Get in Touch</span></h2>
+        <div class="w-20 h-1 bg-emerald-400/50 rounded mb-10 mx-auto"></div>
+        <p class="text-gray-400 text-lg leading-relaxed mb-10" data-i18n="contact.description">I'm always open to new opportunities and interesting projects. Let's build something great together.</p>
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <a href="mailto:claudio@yopki.com" class="px-8 py-3 bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-emerald-500/25 inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span data-i18n="contact.email">Email me</span>
+          </a>
+        </div>
+        <div class="flex justify-center gap-6">
+          <a href="https://github.com/kirizuro" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-emerald-400 transition-colors" aria-label="GitHub">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/claudio-junior-3a6a75136/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-emerald-400 transition-colors" aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800/50 py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-gray-600 text-sm font-mono" data-i18n="footer.built">Built with Svelte & Tailwind CSS</p>
+        <p class="text-gray-700 text-xs mt-2">&copy; 2026 Claudio Junior. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // i18n translations
+    const tr = {
+      en: {
+        'nav.experience': 'Experience', 'nav.projects': 'Projects', 'nav.skills': 'Skills', 'nav.contact': 'Contact',
+        'hero.greeting': "Hi, I'm", 'hero.role': 'Senior Software Engineer',
+        'hero.description': 'Full Stack Developer with 9+ years of experience building agile, well-structured web systems and mobile applications. Specialized in TypeScript, React, Node.js, and modern web technologies.',
+        'hero.cta': 'View my work', 'hero.contact': 'Get in touch',
+        'experience.title': 'Experience',
+        'exp.methodical.title': 'Senior Software Engineer', 'exp.methodical.period': 'Sep 2024 — Aug 2025',
+        'exp.methodical.location': 'Remote · USA',
+        'exp.methodical.description': 'Part of a team developing a comprehensive system that enables clients to create and manage businesses across all US states. Built with Next.js and NestJS in a remote-first environment.',
+        'exp.mouts.title': 'Full Stack Developer', 'exp.mouts.period': 'Jul 2023 — Sep 2024', 'exp.mouts.location': 'Remote',
+        'exp.mouts.description': 'Developed the Rewards Module for AB InBev, one of the largest beverage companies in the world. Built interactive frontends with React.js and TypeScript.',
+        'exp.certsys.title': 'Full Stack Developer', 'exp.certsys.period': 'Jun 2021 — May 2023', 'exp.certsys.location': 'São Paulo, Brazil',
+        'exp.certsys.description': 'Worked on diverse national and international projects. Led mobile development with React Native, implemented CI/CD pipelines, and contributed to enterprise-grade solutions.',
+        'exp.target.title': 'Full Stack Developer', 'exp.target.period': 'Jan 2020 — Apr 2021',
+        'exp.target.description': 'Built a bilingual (English/Spanish) mobile app for a language school using React Native. Implemented real-time chat with Firebase and push notifications.',
+        'exp.cotepe.title': 'Full Stack Developer', 'exp.cotepe.period': 'Sep 2019 — Dec 2019',
+        'exp.cotepe.description': 'Developed a local application for creating sales proposals (PV) for the commercial sector. Built with Vue.js on the frontend and Node.js + Firebase on the backend.',
+        'projects.title': 'Featured Projects',
+        'project.1.title': 'US Business Management Platform', 'project.1.role': 'Senior Engineer',
+        'project.1.description': 'Comprehensive SaaS platform enabling clients to create and manage businesses across all US states. Multi-tenant architecture with complex form workflows and state-specific compliance rules.',
+        'project.2.title': 'AB InBev Rewards Module', 'project.2.role': 'Full Stack Developer',
+        'project.2.description': "Rewards and loyalty system for one of the world's largest beverage companies. High-performance frontend with real-time data visualization and complex business logic.",
+        'project.3.title': 'Bilingual School App', 'project.3.role': 'Mobile Developer',
+        'project.3.description': 'Cross-platform mobile application for a language school with real-time chat, push notifications, and bilingual support (English/Spanish). Built from scratch with React Native.',
+        'project.4.title': 'Enterprise Mobile Solutions', 'project.4.role': 'Full Stack Developer',
+        'project.4.description': 'Multiple national and international mobile applications built with React Native. Implemented CI/CD pipelines and contributed to large-scale enterprise projects.',
+        'skills.title': 'Tech Stack', 'skills.frontend': 'Frontend', 'skills.backend': 'Backend', 'skills.mobile': 'Mobile', 'skills.tools': 'Tools & DevOps',
+        'contact.title': 'Get in Touch',
+        'contact.description': "I'm always open to new opportunities and interesting projects. Let's build something great together.",
+        'contact.email': 'Email me',
+        'footer.built': 'Built with Svelte & Tailwind CSS', 'footer.rights': 'All rights reserved.',
+      },
+      pt: {
+        'nav.experience': 'Experiência', 'nav.projects': 'Projetos', 'nav.skills': 'Habilidades', 'nav.contact': 'Contato',
+        'hero.greeting': 'Olá, eu sou', 'hero.role': 'Engenheiro de Software Sênior',
+        'hero.description': 'Desenvolvedor Full Stack com mais de 9 anos de experiência construindo sistemas web ágeis, bem estruturados e aplicativos mobile. Especializado em TypeScript, React, Node.js e tecnologias web modernas.',
+        'hero.cta': 'Ver meu trabalho', 'hero.contact': 'Entre em contato',
+        'experience.title': 'Experiência',
+        'exp.methodical.title': 'Engenheiro de Software Sênior', 'exp.methodical.period': 'Set 2024 — Ago 2025',
+        'exp.methodical.location': 'Remoto · EUA',
+        'exp.methodical.description': 'Parte de uma equipe no desenvolvimento de um sistema abrangente que permite aos clientes criar e gerenciar empresas em todos os estados dos EUA. Construído com Next.js e NestJS em ambiente remoto.',
+        'exp.mouts.title': 'Desenvolvedor Full Stack', 'exp.mouts.period': 'Jul 2023 — Set 2024', 'exp.mouts.location': 'Remoto',
+        'exp.mouts.description': 'Desenvolvimento do Módulo de Recompensas para AB InBev, uma das maiores empresas de bebidas do mundo. Construção de frontends interativos com React.js e TypeScript.',
+        'exp.certsys.title': 'Desenvolvedor Full Stack', 'exp.certsys.period': 'Jun 2021 — Mai 2023', 'exp.certsys.location': 'São Paulo, Brasil',
+        'exp.certsys.description': 'Atuação em diversos projetos nacionais e internacionais. Liderança no desenvolvimento mobile com React Native, implementação de pipelines CI/CD e contribuição para soluções empresariais.',
+        'exp.target.title': 'Desenvolvedor Full Stack', 'exp.target.period': 'Jan 2020 — Abr 2021',
+        'exp.target.description': 'Construção de um aplicativo mobile bilíngue (Inglês/Espanhol) para uma escola de idiomas usando React Native. Implementação de chat em tempo real com Firebase e notificações push.',
+        'exp.cotepe.title': 'Desenvolvedor Full Stack', 'exp.cotepe.period': 'Set 2019 — Dez 2019',
+        'exp.cotepe.description': 'Desenvolvimento de uma aplicação local para criação de propostas de vendas (PV) para o setor comercial. Construído com Vue.js no Frontend e Node.js + Firebase no Backend.',
+        'projects.title': 'Projetos em Destaque',
+        'project.1.title': 'Plataforma de Gestão Empresarial (EUA)', 'project.1.role': 'Engenheiro Sênior',
+        'project.1.description': 'Plataforma SaaS abrangente que permite aos clientes criar e gerenciar empresas em todos os estados dos EUA. Arquitetura multi-tenant com fluxos complexos de formulários e regras de conformidade estaduais.',
+        'project.2.title': 'Módulo de Recompensas AB InBev', 'project.2.role': 'Desenvolvedor Full Stack',
+        'project.2.description': 'Sistema de recompensas e fidelidade para uma das maiores empresas de bebidas do mundo. Frontend de alta performance com visualização de dados em tempo real e lógica de negócios complexa.',
+        'project.3.title': 'App Escola Bilíngue', 'project.3.role': 'Desenvolvedor Mobile',
+        'project.3.description': 'Aplicativo mobile multiplataforma para escola de idiomas com chat em tempo real, notificações push e suporte bilíngue (Inglês/Espanhol). Construído do zero com React Native.',
+        'project.4.title': 'Soluções Mobile Empresariais', 'project.4.role': 'Desenvolvedor Full Stack',
+        'project.4.description': 'Múltiplas aplicações mobile nacionais e internacionais construídas com React Native. Implementação de pipelines CI/CD e contribuição para projetos empresariais de grande escala.',
+        'skills.title': 'Stack Tecnológica', 'skills.frontend': 'Frontend', 'skills.backend': 'Backend', 'skills.mobile': 'Mobile', 'skills.tools': 'Ferramentas & DevOps',
+        'contact.title': 'Entre em Contato',
+        'contact.description': 'Estou sempre aberto a novas oportunidades e projetos interessantes. Vamos construir algo incrível juntos.',
+        'contact.email': 'Enviar email',
+        'footer.built': 'Construído com Svelte & Tailwind CSS', 'footer.rights': 'Todos os direitos reservados.',
+      }
+    };
+
+    let lang = 'en';
+
+    function toggleLang() {
+      lang = lang === 'en' ? 'pt' : 'en';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (tr[lang][key]) el.textContent = tr[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-btn="lang"]').forEach(el => {
+        el.textContent = lang === 'en' ? 'PT' : 'EN';
+      });
+      document.getElementById('langToggle').textContent = lang === 'en' ? 'PT' : 'EN';
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        nav.classList.add('bg-gray-950/90', 'backdrop-blur-md', 'border-b', 'border-gray-800/50');
+        nav.classList.remove('bg-transparent');
+      } else {
+        nav.classList.remove('bg-gray-950/90', 'backdrop-blur-md', 'border-b', 'border-gray-800/50');
+        nav.classList.add('bg-transparent');
+      }
+    });
+
+    // Mobile menu
+    function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    function closeMobile() { document.getElementById('mobileMenu').classList.add('hidden'); }
+
+    // Skills bars
+    const skillsData = {
+      frontend: [
+        { name: 'TypeScript', level: 95 }, { name: 'React.js', level: 95 }, { name: 'Next.js', level: 90 },
+        { name: 'Vue.js', level: 80 }, { name: 'Svelte', level: 70 }, { name: 'HTML/CSS', level: 95 }, { name: 'Tailwind CSS', level: 90 }
+      ],
+      backend: [
+        { name: 'Node.js', level: 90 }, { name: 'NestJS', level: 85 }, { name: 'Express', level: 90 },
+        { name: 'PostgreSQL', level: 80 }, { name: 'Firebase', level: 85 }, { name: 'REST APIs', level: 95 }, { name: 'SQL', level: 80 }
+      ],
+      mobile: [
+        { name: 'React Native', level: 90 }, { name: 'Push Notifications', level: 85 },
+        { name: 'App Store Deploy', level: 80 }, { name: 'Real-time Chat', level: 85 }
+      ],
+      tools: [
+        { name: 'Git', level: 95 }, { name: 'CI/CD', level: 85 }, { name: 'Docker', level: 75 },
+        { name: 'Linux', level: 80 }, { name: 'Agile/Scrum', level: 90 }, { name: 'SEO', level: 70 }
+      ]
+    };
+
+    Object.entries(skillsData).forEach(([cat, skills]) => {
+      const container = document.getElementById('skills-' + cat);
+      if (!container) return;
+      skills.forEach(skill => {
+        container.innerHTML += `
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-300 text-sm font-mono">${skill.name}</span>
+              <span class="text-gray-600 text-xs font-mono">${skill.level}%</span>
+            </div>
+            <div class="w-full bg-gray-800 rounded-full h-1.5">
+              <div class="bg-emerald-400 h-1.5 rounded-full transition-all duration-1000" style="width: ${skill.level}%"></div>
+            </div>
+          </div>`;
+      });
+    });
+  </script>
+</body>
+</html>

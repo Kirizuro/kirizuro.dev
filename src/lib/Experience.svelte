@@ -3,8 +3,9 @@
   import { reveal, revealChildren } from './reveal';
 
   const jobs = [
-    { key: 'methodical', tech: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL'] },
-    { key: 'mouts', tech: ['React.js', 'TypeScript', 'Node.js'] },
+    { key: 'telus', tech: ['Next.js', 'TypeScript', 'GCP', 'Terraform', 'BigQuery', 'LLMs'] },
+    { key: 'methodical', tech: ['Next.js', 'NestJS', 'GraphQL', 'Prisma', 'Stripe', 'AWS'] },
+    { key: 'mouts', tech: ['React.js', 'NestJS', 'TypeScript', 'Azure', 'AG Grid'] },
     { key: 'certsys', tech: ['React Native', 'CI/CD', 'TypeScript', 'Node.js'] },
     { key: 'target', tech: ['React Native', 'Firebase', 'SQL', 'Push Notifications'] },
     { key: 'cotepe', tech: ['Vue.js', 'Node.js', 'Firebase'] },

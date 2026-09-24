@@ -41,6 +41,7 @@
         <span class="ml-4" style="color: var(--text-muted);">name:</span> <span style="color: var(--code-string);">'Claudio Junior'</span>,<br/>
         <span class="ml-4" style="color: var(--text-muted);">stack:</span> [<span style="color: var(--code-string);">'TypeScript'</span>, <span style="color: var(--code-string);">'React'</span>, <span style="color: var(--code-string);">'Node.js'</span>],<br/>
         <span class="ml-4" style="color: var(--text-muted);">experience:</span> <span style="color: var(--code-number);">'9+ years'</span>,<br/>
+        <span class="ml-4" style="color: var(--text-muted);">speaker:</span> <span style="color: var(--code-string);">'TDC, 12 years'</span>,<br/>
         <span class="ml-4" style="color: var(--text-muted);">available:</span> <span style="color: var(--accent);">true</span><br/>
         &#125;;
       </div>

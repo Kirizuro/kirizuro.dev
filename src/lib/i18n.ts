@@ -16,7 +16,7 @@ const translations: Record<Locale, Record<string, string>> = {
     // Hero
     'hero.greeting': "Hi, I'm",
     'hero.role': 'Senior Software Engineer',
-    'hero.description': 'Full Stack Developer with 9+ years of experience building agile, well-structured web systems and mobile applications. Specialized in TypeScript, React, Node.js, and modern web technologies.',
+    'hero.description': 'Full Stack Developer with 9+ years of experience building agile, well-structured web systems and mobile applications. Specialized in TypeScript, React, Node.js, and modern web technologies — currently building GenAI-powered products at TELUS Digital. Public speaker for 12 years.',
     'hero.cta': 'View my work',
     'hero.contact': 'Get in touch',
 
@@ -25,22 +25,28 @@ const translations: Record<Locale, Record<string, string>> = {
     'experience.present': 'Present',
 
     // Experience items
+    'exp.telus.title': 'Senior Software Engineer',
+    'exp.telus.company': 'TELUS Digital (via Poatek)',
+    'exp.telus.period': 'Oct 2025 — Present',
+    'exp.telus.description': 'Embedded in the GenAI Accelerator team building AI-powered Voice of Customer products for one of Canada\'s largest telecoms. Shipped multi-turn conversations and per-user history, led the migration of a legacy Google Apps Script tool to Next.js, and cut production LLM API load by ~50% by removing a redundant heavyweight call. Stood up a new product on GCP from an empty project with Terraform, and piloted spec-driven development with Claude Code that spread to a teammate\'s repo.',
+    'exp.telus.location': 'Remote',
+
     'exp.methodical.title': 'Senior Software Engineer',
     'exp.methodical.company': 'The Methodical Group',
     'exp.methodical.period': 'Sep 2024 — Aug 2025',
-    'exp.methodical.description': 'Part of a team developing a comprehensive system that enables clients to create and manage businesses across all US states. Built with Next.js and NestJS in a remote-first environment.',
+    'exp.methodical.description': 'Senior engineer on a US SaaS platform for creating and managing companies across all states — ownership, billing and compliance workflows. Designed Prisma schemas, built GraphQL resolvers, integrated Stripe subscriptions and refunds, and shipped an Amazon Titan-powered company-name generator. Deployed to AWS EKS with GitHub Actions.',
     'exp.methodical.location': 'Remote · USA',
 
-    'exp.mouts.title': 'Full Stack Developer',
+    'exp.mouts.title': 'Senior Full Stack Engineer',
     'exp.mouts.company': 'Mouts TI',
     'exp.mouts.period': 'Jul 2023 — Sep 2024',
-    'exp.mouts.description': 'Developed the Rewards Module for AB InBev, one of the largest beverage companies in the world. Built interactive frontends with React.js and TypeScript.',
+    'exp.mouts.description': 'Built the Rewards Module for AB InBev, one of the largest beverage companies in the world: a bonus calculation system, AG Grid tables and an async PDF-generation API on Azure Service Bus. Moved to the Aurora project, delivering a NestJS journal-entry automation service for SAP and scaling a report export from 50 lines to 150k+.',
     'exp.mouts.location': 'Remote',
 
     'exp.certsys.title': 'Full Stack Developer',
     'exp.certsys.company': 'Certsys Tecnologia da Informação',
     'exp.certsys.period': 'Jun 2021 — May 2023',
-    'exp.certsys.description': 'Worked on diverse national and international projects. Led mobile development with React Native, implemented CI/CD pipelines, and contributed to enterprise-grade solutions.',
+    'exp.certsys.description': 'Worked on diverse national and international projects. Led mobile development with React Native, implemented CI/CD pipelines, and contributed to enterprise-grade solutions. Speaker at TDC on building MVPs and the challenges of applying them well.',
     'exp.certsys.location': 'São Paulo, Brazil',
 
     'exp.target.title': 'Full Stack Developer',
@@ -59,6 +65,14 @@ const translations: Record<Locale, Record<string, string>> = {
     'projects.title': 'Featured Projects',
     'projects.viewCode': 'Source Code',
     'projects.viewLive': 'Live Demo',
+
+    'project.5.title': 'Voice of Customer AI Platform',
+    'project.5.description': 'GenAI-powered customer insights tools for a major telecom. Rebuilt a legacy Apps Script app in Next.js with multi-turn conversations, per-user history, LDAP/SSO access control and a sales-insights feature wired across four LLM prompts. Cut production API load ~50%.',
+    'project.5.role': 'Senior Engineer',
+
+    'project.6.title': 'Lumio',
+    'project.6.description': 'New AI product built from an empty GCP project: cloud footprint and Cloud SQL provisioned with Terraform (13 resources, 0 errors), landing screen, and formal onboarding into the company\'s app registry.',
+    'project.6.role': 'Senior Engineer',
 
     'project.1.title': 'US Business Management Platform',
     'project.1.description': 'Comprehensive SaaS platform enabling clients to create and manage businesses across all US states. Multi-tenant architecture with complex form workflows and state-specific compliance rules.',
@@ -82,6 +96,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'skills.backend': 'Backend',
     'skills.mobile': 'Mobile',
     'skills.tools': 'Tools & DevOps',
+    'skills.cloud': 'Cloud & Data',
+    'skills.ai': 'AI & LLMs',
 
     // Contact
     'contact.title': 'Get in Touch',
@@ -104,7 +120,7 @@ const translations: Record<Locale, Record<string, string>> = {
     // Hero
     'hero.greeting': 'Olá, eu sou',
     'hero.role': 'Engenheiro de Software Sênior',
-    'hero.description': 'Desenvolvedor Full Stack com mais de 9 anos de experiência construindo sistemas web ágeis, bem estruturados e aplicativos mobile. Especializado em TypeScript, React, Node.js e tecnologias web modernas.',
+    'hero.description': 'Desenvolvedor Full Stack com mais de 9 anos de experiência construindo sistemas web ágeis, bem estruturados e aplicativos mobile. Especializado em TypeScript, React, Node.js e tecnologias web modernas — atualmente construindo produtos com GenAI na TELUS Digital. Palestrante há 12 anos.',
     'hero.cta': 'Ver meu trabalho',
     'hero.contact': 'Entre em contato',
 
@@ -113,22 +129,28 @@ const translations: Record<Locale, Record<string, string>> = {
     'experience.present': 'Atual',
 
     // Experience items
+    'exp.telus.title': 'Engenheiro de Software Sênior',
+    'exp.telus.company': 'TELUS Digital (via Poatek)',
+    'exp.telus.period': 'Out 2025 — Atual',
+    'exp.telus.description': 'Integrado ao time GenAI Accelerator, construindo produtos de Voice of Customer com IA para uma das maiores operadoras de telecom do Canadá. Entreguei conversas multi-turno com histórico por usuário, liderei a migração de uma ferramenta legada em Google Apps Script para Next.js e reduzi em ~50% a carga de API de LLM em produção ao eliminar uma chamada pesada redundante. Estruturei um novo produto no GCP a partir de um projeto vazio com Terraform e pilotei Spec-Driven Development com Claude Code, adotado depois no repositório de um colega.',
+    'exp.telus.location': 'Remoto',
+
     'exp.methodical.title': 'Engenheiro de Software Sênior',
     'exp.methodical.company': 'The Methodical Group',
     'exp.methodical.period': 'Set 2024 — Ago 2025',
-    'exp.methodical.description': 'Parte de uma equipe no desenvolvimento de um sistema abrangente que permite aos clientes criar e gerenciar empresas em todos os estados dos EUA. Construído com Next.js e NestJS em ambiente remoto.',
+    'exp.methodical.description': 'Engenheiro sênior em uma plataforma SaaS americana para criar e gerenciar empresas em todos os estados — fluxos de participação societária, cobrança e conformidade. Modelei schemas Prisma, construí resolvers GraphQL, integrei assinaturas e reembolsos com Stripe e entreguei um gerador de nomes de empresas com Amazon Titan. Deploy em AWS EKS com GitHub Actions.',
     'exp.methodical.location': 'Remoto · EUA',
 
-    'exp.mouts.title': 'Desenvolvedor Full Stack',
+    'exp.mouts.title': 'Desenvolvedor Full Stack Sênior',
     'exp.mouts.company': 'Mouts TI',
     'exp.mouts.period': 'Jul 2023 — Set 2024',
-    'exp.mouts.description': 'Desenvolvimento do Módulo de Recompensas para AB InBev, uma das maiores empresas de bebidas do mundo. Construção de frontends interativos com React.js e TypeScript.',
+    'exp.mouts.description': 'Desenvolvimento do Módulo de Recompensas da AB InBev, uma das maiores empresas de bebidas do mundo: sistema de cálculo de bônus, tabelas com AG Grid e uma API assíncrona de geração de PDF com Azure Service Bus. Depois atuei no projeto Aurora, entregando um serviço NestJS de automação de lançamentos contábeis para SAP e escalando a exportação de relatórios de 50 linhas para mais de 150 mil.',
     'exp.mouts.location': 'Remoto',
 
     'exp.certsys.title': 'Desenvolvedor Full Stack',
     'exp.certsys.company': 'Certsys Tecnologia da Informação',
     'exp.certsys.period': 'Jun 2021 — Mai 2023',
-    'exp.certsys.description': 'Atuação em diversos projetos nacionais e internacionais. Liderança no desenvolvimento mobile com React Native, implementação de pipelines CI/CD e contribuição para soluções empresariais.',
+    'exp.certsys.description': 'Atuação em diversos projetos nacionais e internacionais. Liderança no desenvolvimento mobile com React Native, implementação de pipelines CI/CD e contribuição para soluções empresariais. Palestrante no TDC sobre MVPs e os desafios de aplicá-los bem.',
     'exp.certsys.location': 'São Paulo, Brasil',
 
     'exp.target.title': 'Desenvolvedor Full Stack',
@@ -147,6 +169,14 @@ const translations: Record<Locale, Record<string, string>> = {
     'projects.title': 'Projetos em Destaque',
     'projects.viewCode': 'Código Fonte',
     'projects.viewLive': 'Demo ao Vivo',
+
+    'project.5.title': 'Plataforma de IA Voice of Customer',
+    'project.5.description': 'Ferramentas de insights de clientes com GenAI para uma grande operadora de telecom. Reconstruí um app legado em Apps Script com Next.js, incluindo conversas multi-turno, histórico por usuário, controle de acesso LDAP/SSO e uma funcionalidade de insights de vendas integrada a quatro prompts de LLM. Reduzi ~50% da carga de API em produção.',
+    'project.5.role': 'Engenheiro Sênior',
+
+    'project.6.title': 'Lumio',
+    'project.6.description': 'Novo produto de IA construído a partir de um projeto GCP vazio: infraestrutura de nuvem e Cloud SQL provisionados com Terraform (13 recursos, 0 erros), tela inicial e cadastro formal no inventário de aplicações da empresa.',
+    'project.6.role': 'Engenheiro Sênior',
 
     'project.1.title': 'Plataforma de Gestão Empresarial (EUA)',
     'project.1.description': 'Plataforma SaaS abrangente que permite aos clientes criar e gerenciar empresas em todos os estados dos EUA. Arquitetura multi-tenant com fluxos complexos de formulários e regras de conformidade estaduais.',
@@ -170,6 +200,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'skills.backend': 'Backend',
     'skills.mobile': 'Mobile',
     'skills.tools': 'Ferramentas & DevOps',
+    'skills.cloud': 'Cloud & Dados',
+    'skills.ai': 'IA & LLMs',
 
     // Contact
     'contact.title': 'Entre em Contato',

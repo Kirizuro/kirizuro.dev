@@ -27,6 +27,8 @@
         { name: 'Firebase', level: 85 },
         { name: 'REST APIs', level: 95 },
         { name: 'SQL', level: 80 },
+        { name: 'GraphQL', level: 85 },
+        { name: 'Prisma', level: 80 },
       ],
     },
     {
@@ -49,6 +51,29 @@
         { name: 'Linux', level: 80 },
         { name: 'Agile/Scrum', level: 90 },
         { name: 'SEO', level: 70 },
+      ],
+    },
+    {
+      key: 'cloud',
+      icon: '☁️',
+      skills: [
+        { name: 'GCP (GKE, Cloud SQL, Secret Manager)', level: 80 },
+        { name: 'AWS (EKS, Lambda, RDS)', level: 80 },
+        { name: 'Terraform', level: 80 },
+        { name: 'BigQuery', level: 70 },
+        { name: 'GitHub Actions', level: 85 },
+        { name: 'Azure (AKS, Service Bus)', level: 75 },
+      ],
+    },
+    {
+      key: 'ai',
+      icon: '✦',
+      skills: [
+        { name: 'LLM Integration', level: 85 },
+        { name: 'Prompt Engineering', level: 85 },
+        { name: 'Vector Search (Turbopuffer)', level: 70 },
+        { name: 'Claude Code / Spec-Driven Dev', level: 90 },
+        { name: 'Gemini', level: 75 },
       ],
     },
   ];

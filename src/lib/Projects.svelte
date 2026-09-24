@@ -4,6 +4,16 @@
 
   const projects = [
     {
+      id: '5',
+      tech: ['Next.js', 'TypeScript', 'Gemini', 'Vector Search', 'LDAP / SSO'],
+      icon: '🎧',
+    },
+    {
+      id: '6',
+      tech: ['GCP', 'Terraform', 'Cloud SQL', 'Next.js'],
+      icon: '💡',
+    },
+    {
       id: '1',
       tech: ['Next.js', 'NestJS', 'TypeScript', 'PostgreSQL', 'REST API'],
       icon: '🏢',
